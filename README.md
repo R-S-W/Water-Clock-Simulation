@@ -28,6 +28,8 @@ We map the y values to the time when the nozzles should fire the droplets.  The 
 
 <img src = 'readme_assets/equations.png' width = '800'/>
 
+My program records the initial drawing as a list of 2d points, each with an x and y value.  The program converts the x into a number i that indicates which nozzle to use.  It converts the y into D(y), the proper time to fire the droplet.  It then takes this new list of pairs of i and D(y), sorts it by time, and commences the drawing program that records the elapsed time, firing a droplet at nozzle i at the specified time D(y).
+
 
 
 ## Application
