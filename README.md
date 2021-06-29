@@ -1,6 +1,6 @@
 # Water Clock Simulation
 
-I created a simple simulation to replicate a water fountain that prints pictures and designs.
+I created a simple simulation a year ago to replicate a water fountain that prints pictures and designs.
 ![](readme_assets/time.gif)
 
 <img src="readme_assets/teddy.gif" alt="drawing" width="600"/>
