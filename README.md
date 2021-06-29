@@ -10,4 +10,7 @@ Here lies an interesting problem: how does one program the nozzles to print out 
 So how do you draw it?  I sought to find out how can one draw a picture and have it be perfectly replicated without distortion.
 
 ## Simulation
-I used 
+I used pymunk and pyGame to simulate a 2d version of the fountain.  Water droplets were small circles that were influenced by gravity (no cohesion or air resistance considered.)  My application has 2 modes: a preprogrammed picture (list of points), and a drawing mode.  For the drawing mode, I used the pygame event listeners to allow users to draw their own picture by recording the positions of their cursor.
+
+## Computation
+
