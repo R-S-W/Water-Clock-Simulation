@@ -23,12 +23,12 @@ I coded my progam in python using a Jupyter notebook.  I used pymunk and pyGame 
 ## Computation
 To convert a drawing to commands to print the picture, we convert the drawing into a list of 2d points.  For one point with values (x,y), we take the x and map it to a number n that tells the fountain to fire the nth nozzle: the droplets on the left are taken care of the nozzles on the left.  The y value, the height of the droplet, tells us something else.  
 
-We map the y values to the time when the nozzles should fire the droplets.  Since gravity is the only force acting upon the droplets, their position function is a typical quadratic with respect to time.   By finding the inverse function of the position, we obtain a function that gives the time it takes for the droplet to fall to a given position. To obtain the appropriate time for firing a specific droplet, we take the time taken for the bottommost droplet to fall to its appropriate position from our drawing and subtract the time it takes for the specific droplet to fall to its position in the drawing.  In other words, we take the inverse function of the bottom point's y value and subtract it by the inverse function of the point in question's y value.  By doing this we convert the y position to a time for a certain nozzle to fire. 
-
+We map the y values to the time when the nozzles should fire the droplets.  The program will take a pair of numbers: i, telling the program to fire the ith nozzle, and D, the time to fire the nozzle.  Since gravity is the only force acting upon the droplets, their position function is a typical quadratic with respect to time (Eq. 1.)  We then find the inverse function of the position, f, giving us the time it takes for the droplet to fall to a given position (Eq. 2.)  We then calculate the time where the droplet picture matches the original drawing, which can be given by using the inverse function of the y value of the lowest point of the drawing.  We name this time T (Eq. 3.)  We find the time to fire the nozzle, called D, equal to T minus the inverse function of the height of the droplet (Eq. 4.)
 <img src = 'readme_assets/equations.png' width = '700'/>
 
-<img src="readme_assets/sine.gif" alt="drawing" width="600"/>
 
 
 ## Application
 Preset drawings are made.  The user can draw their own picture and see if the droplets match the shape exactly.
+<img src="readme_assets/sine.gif" alt="drawing" width="600"/>
+
