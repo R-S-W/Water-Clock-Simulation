@@ -3,7 +3,7 @@
 I created a simple simulation to replicate a water fountain that prints pictures and designs.
 ![](readme_assets/time.gif)
 
-My own gif
+![](readme_assets/teddy.gif)
 
 ## Intro
 I was inspired by the Osaka Station Water Clock, a fountain that displays the current time with water.  The fountain is a line of programmable nozzles that creates a curtain of water.  They can be programmed to draw shapes, pictures, and designs by controlling when a nozzle fires water at a specific time.
@@ -22,6 +22,8 @@ I coded my progam in python using a Jupyter notebook.  I used pymunk and pyGame 
 To convert a drawing to commands to print the picture, we convert the drawing into a list of 2d points.  For one point with values (x,y), we take the x and map it to a number n that tells the fountain to fire the nth nozzle: the droplets on the left are taken care of the nozzles on the left.  The y value, the height of the droplet, tells us something else.  
 
 We map the y values to the time when the nozzles should fire the droplets.  The points at the bottom are fired first, so we have to fire the lowest droplets at the start of the program.  Consequently, the highest points of our drawing are fired last.  Since gravity is the only force acting upon the droplets, their position function is a typical quadratic with respect to time. By finding the inverse function of the position, we obtain a function that gives the time it takes for the droplet to fall to a given position. To obtain the appropriate time for firing a specific droplet, we take the time taken for the bottommost droplet to fall to its appropriate position from our drawing and subtract the time it takes for the specific droplet to fall to its position in the drawing.  In other words, we take the inverse function of the bottom point's y value and subtract it by the inverse function of the point in question's y value.  By doing this we convert the y position to a time for a certain nozzle to fire. 
+
+![](readme_assets/sine.gif)
 
 ## Application
 Preset drawings are made.  The user can draw their own picture and see if the droplets match the shape exactly.
