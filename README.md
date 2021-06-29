@@ -32,3 +32,5 @@ We map the y values to the time when the nozzles should fire the droplets.  The 
 Preset drawings are made.  The user can draw their own picture and see if the droplets match the shape exactly.
 <img src="readme_assets/sine.gif" alt="drawing" width="600"/>
 
+<img src="readme_assets/rsw.gif" alt="drawing" width="600"/>
+
